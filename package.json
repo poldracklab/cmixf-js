@@ -1,0 +1,22 @@
+{
+  "name": "cmixf",
+  "version": "1.0.0",
+  "description": "cmixf parser generated using jison.",
+  "main": "index.js",
+  "bin": "./bin/cmixf",
+  "dependencies": {
+    "esm": "^3.2.25",
+    "jison-gho": "^0.6.1-216",
+    "minimist": "^1.2.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ross Blair",
+  "license": "MIT",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/poldracklab/cmixf-js.git"
+  }
+}
