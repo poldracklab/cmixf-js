@@ -376,9 +376,8 @@
  *  }
  */
 
-        
-    
-            var cmixf = (function () {
+
+
 
 
 // See also:
@@ -562,7 +561,7 @@ var parser = {
     //   parser table compression mode: ... 2
     //   export debug tables: ............. false
     //   export *all* tables: ............. false
-    //   module type: ..................... commonjs
+    //   module type: ..................... es
     //   parser engine type: .............. lalr
     //   output main() in the module: ..... true
     //   has user-specified main(): ....... false
@@ -4620,23 +4619,23 @@ parser.lexer = lexer;
 
 
 
+
 function Parser() {
-  this.yy = {};
+    this.yy = {};
 }
 Parser.prototype = parser;
 parser.Parser = Parser;
 
-return new Parser();
-})();
-
-        
-
-
-if (typeof require !== 'undefined' && typeof exports !== 'undefined') {
-  exports.parser = cmixf;
-  exports.Parser = cmixf.Parser;
-  exports.parse = function () {
-    return cmixf.parse.apply(cmixf, arguments);
-  };
-  
+function yyparse() {
+    return parser.parse.apply(parser, arguments);
 }
+
+
+
+export default {
+    parser,
+    Parser,
+    parse: yyparse,
+    
+};
+

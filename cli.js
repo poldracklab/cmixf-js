@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 import cmixf from './cmixf.js'
 
 function cli_parse(input) {
@@ -12,5 +13,7 @@ function cli_parse(input) {
 export function cli(args) {
   console.log(args);
   console.log("------");
-  args['_'].map(x => cli_parse(x));
+  args.map(x => cli_parse(x));
 }
+
+cli(process.argv.slice(2))

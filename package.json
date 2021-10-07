@@ -2,12 +2,11 @@
   "name": "cmixf",
   "version": "1.0.0",
   "description": "cmixf parser generated using jison.",
-  "main": "index.js",
-  "bin": "./bin/cmixf",
+  "main": "./index.js",
+  "bin": {"cmixfjs": "./cli.js"},
+  "type": "module",
   "dependencies": {
-    "esm": "^3.2.25",
-    "jison-gho": "^0.6.1-216",
-    "minimist": "^1.2.5"
+    "jison-gho": "^0.6.1-216"
   },
   "devDependencies": {},
   "scripts": {
